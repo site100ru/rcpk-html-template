@@ -209,3 +209,69 @@ $(document).ready(function () {
         }, 800); // 800ms - скорость анимации
     });
 });
+
+$(document).ready(function() {
+    // Клик на изображение для открытия модального окна
+    $('.photo-swipe-image, .photo-swipe-image-nc').on('click', function() {
+        var imgSrc = $(this).find('img').attr('src');
+        var imgAlt = $(this).find('img').attr('alt');
+        
+        // Создаем модальное окно
+        var modal = `
+            <div id="pswp-mosaic" class="pswp pswp--open pswp--animate_opacity pswp--notouch pswp--css_animation pswp--svg pswp--visible" 
+                 tabindex="-1" role="dialog" aria-hidden="false" style="position: fixed; opacity: 0; z-index: 9999;">
+                <div class="pswp__bg" style="opacity: 0"></div>
+                <div class="pswp__scroll-wrap">
+                    <div class="pswp__container">
+                        <div class="pswp__item">
+                            <div class="pswp__zoom-wrap">
+                                <img class="pswp__img" src="${imgSrc}" alt="${imgAlt}" style="opacity: 0; max-width: 90vw; max-height: 90vh; display: block;" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="pswp__button pswp__button--close" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 40px; cursor: pointer; z-index: 10000;">&times;</button>
+                </div>
+            </div>
+        `;
+        
+        // Добавляем модальное окно в body
+        $('body').append(modal);
+        
+        // Анимация появления
+        setTimeout(function() {
+            $('#pswp-mosaic').css('opacity', '1');
+            $('#pswp-mosaic .pswp__bg').css('opacity', '0.7');
+            $('#pswp-mosaic .pswp__img').css('opacity', '1');
+            $('#pswp-mosaic').addClass('pswp--animated-in pswp--has_mouse');
+        }, 50);
+        
+        // Блокируем скролл body
+        $('body').css('overflow', 'hidden');
+    });
+    
+    // Закрытие модального окна по клику на кнопку закрытия
+    $(document).on('click', '.pswp__button--close', function() {
+        closeModal();
+    });
+    
+    // Закрытие модального окна по клику на фон
+    $(document).on('click', '.pswp__bg', function() {
+        closeModal();
+    });
+    
+    // Закрытие по клавише ESC
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $('#pswp-mosaic').length) {
+            closeModal();
+        }
+    });
+    
+    // Функция закрытия модального окна
+    function closeModal() {
+        $('#pswp-mosaic').css('opacity', '0');
+        setTimeout(function() {
+            $('#pswp-mosaic').remove();
+            $('body').css('overflow', '');
+        }, 300);
+    }
+});
