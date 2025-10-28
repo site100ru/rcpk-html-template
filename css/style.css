@@ -343,14 +343,14 @@
 	--color-i9bagk5o9: 255, 255, 255;
 	--color-i6thnyj7g: 255, 255, 255;
 	--color-ieqiqp4az: 255, 255, 255;
-	--image-i8gf689jt: url('./img/home.webp');
+	--image-i8gf689jt: url('../img/home.webp');
 	--color-ivr6gydb8: 0, 0, 0;
 	--color-i6rln5oc0: 21, 9, 9;
 	--color-i5zuz4d99: 24, 1, 1;
 	--color-i8vak5rbu: 255, 255, 255;
 	--color-iomd9ioct: 23, 2, 2;
 	--color-ie3y1vwbl: 255, 255, 255;
-	--image-i8la7sfzv: url('./img/home-1.webp');
+	--image-i8la7sfzv: url('../img/home-1.webp');
 	--color-iv7slxufw: 242, 219, 182;
 	--color-i16bdolhf: 51, 10, 10;
 	--color-iymvg7vd5: 255, 255, 255;
@@ -441,12 +441,12 @@
 	--color-i9hnk38kw: 255, 255, 255;
 	--color-ipquw22cn: 0, 0, 0;
 	--color-iyqa7krwd: 21, 9, 9;
-	--image-iumjabrd6: url('./img/home-1.webp');
-	--image-i52znho4z: url('./img/home.webp');
+	--image-iumjabrd6: url('../img/home-1.webp');
+	--image-i52znho4z: url('../img/home.webp');
 	--color-igvatubl9: 48, 15, 4;
-	--image-ix3ing3lv: url('./img/home-1.webp');
-	--image-il8eydleb: url('./img/home-1.webp');
-	--image-isqrtjxpg: url('./img/home-1.webp');
+	--image-ix3ing3lv: url('../img/home-1.webp');
+	--image-il8eydleb: url('../img/home-1.webp');
+	--image-isqrtjxpg: url('../img/home-1.webp');
 	--color-iuj1whtp2: 23, 2, 2;
 	--color-ipkwn1rhr: 255, 255, 255;
 	--color-ihqt36fed: 24, 1, 1;
@@ -454,7 +454,7 @@
 	--color-ianjwq9hy: 0, 0, 0;
 	--color-iwejnrrn9: 21, 9, 9;
 	--color-ij09687d5: 0, 0, 0;
-	--image-i7ewytpvs: url('./img/home.webp');
+	--image-i7ewytpvs: url('../img/home.webp');
 }
 
 .root--u-ibcywfqup {
